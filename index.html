@@ -22,14 +22,14 @@
       <h1 class="col text-primary"><span class="bi-calculator-fill me-2"></span>Calculadora Butirilcolinesterase</h1>
       <h1 class="col text-end mb-5"><a href="#" class="text-decoration-none">Início</a></h1>
       
-      <div class="principal_filha container-fluid mb-2 p-md-5 mb-3">
+      <div class="principal_filha container-fluid mb-2 p-md-5 mb-3 rounded-4 border">
         <div class="row p-2 d-flex align-items-center">
           <div class="col-12 col-lg-6 ps-0"><label for="inputAmostra" class="col-form-label">
             <h1 class="display-6">Insira o número de amostras:</h1>
           </label>
         </div>
         <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-          <input id="inputAmostra" type="text" class="form-control" placeholder="Informar apenas números (ex: 12)" pattern="[0-9]+" title="Apenas números inteiros são permitidos">
+          <input id="inputAmostra" type="number" class="form-control" placeholder="Informar apenas números (ex: 12)" pattern="[0-9]+" title="Apenas números inteiros são permitidos">
         </div>
         <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center">
           <button id="btnProcessar" type="submit" class="btn btn-outline-primary mx-auto">Processar</button>
@@ -37,7 +37,7 @@
       </div>
       <hr>
       
-      <h1 class="display-6 mt-5">Solução</h1>
+      <h1 class="display-6 mt-5">Solução do substrato</h1>
       <table class="table table-hover mb-5">
         <tr>
           <td class="col-8">Amostras + duplicadas:</td>

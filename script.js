@@ -13,16 +13,25 @@ function atualizarDados() {
     let amostra = parseFloat(amostraInput.value);
 
     let amostraDuplicadas = Math.ceil(amostra * 1.7 * 2);
-    document.querySelector('.resultado1_1').innerText = amostraDuplicadas;
+    document.querySelector('.resultado1_1').innerText = amostraDuplicadas + " amostras";
     let substratoButiril = (amostraDuplicadas * 0.03);
-    document.querySelector('.resultado2_1').innerText = substratoButiril.toFixed(5);
-    document.querySelector('.resultado3_1').innerText = ((substratoButiril * 0.063) / 25).toFixed(5);
+    document.querySelector('.resultado2_1').innerText = substratoButiril.toFixed(1) + " ml";
+    document.querySelector('.resultado3_1').innerText = calcularResultado((substratoButiril * 0.063) / 25) + " g";
 
     let solucaoSistema = amostraDuplicadas * 0.15;
-    document.querySelector('.resultado1_2').innerText = solucaoSistema.toFixed(5);
-    document.querySelector('.resultado2_2').innerText = (solucaoSistema / 5).toFixed(5);
+    document.querySelector('.resultado1_2').innerText = solucaoSistema.toFixed(1) + " ml";
+    document.querySelector('.resultado2_2').innerText = (solucaoSistema / 5).toFixed(1) + " ml";
     let pesarDTNB = (solucaoSistema * 0.396) / 200;
-    document.querySelector('.resultado3_2').innerText = pesarDTNB.toFixed(5);
+    document.querySelector('.resultado3_2').innerText = calcularResultado(pesarDTNB) + " g";
     let pesarBicarbonato = (solucaoSistema * 0.06) / 200;
-    document.querySelector('.resultado4_2').innerText = pesarBicarbonato.toFixed(5);
+    document.querySelector('.resultado4_2').innerText = calcularResultado(pesarBicarbonato) + " g";
+}
+
+function calcularResultado(conta) {
+    if (conta % 1 !== 0) {
+        // Se tiver casas decimais, limita para 5 casas decimais
+        conta = conta.toFixed(5);
+    }
+
+    return conta;
 }
