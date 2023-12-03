@@ -14,9 +14,9 @@ function atualizarDados() {
 
     let amostraDuplicadas = Math.ceil(amostra * 1.7 * 2);
     document.querySelector('.resultado1_1').innerText = amostraDuplicadas + " amostras";
-    let substratoButiril = (amostraDuplicadas * 0.02);
-    document.querySelector('.resultado2_1').innerText = substratoButiril.toFixed(1) + " ml";
-    document.querySelector('.resultado3_1').innerText = calcularResultado((substratoButiril * 0.04112) / 10) + " g";
+    let substratoAcetil = (amostraDuplicadas * 0.02);
+    document.querySelector('.resultado2_1').innerText = substratoAcetil.toFixed(1) + " ml";
+    document.querySelector('.resultado3_1').innerText = calcularResultado((substratoAcetil * 0.04112) / 10) + " g";
 
     let solucaoSistema = amostraDuplicadas * 0.19;
     document.querySelector('.resultado1_2').innerText = solucaoSistema.toFixed(1) + " ml";
